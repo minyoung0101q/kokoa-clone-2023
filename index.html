@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="css/style.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to KakaoTalk</title>
+  </head>
+  <body>
+    <div class="status-bar">
+      <div class="status-bar__column">
+        <span>No Service</span>
+        <i class="fa-solid fa-wifi"></i>
+      </div>
+      <div class="status-bar__column">
+        <span>18:43</span>
+      </div>
+      <div class="status-bar__column">
+        <span>100%</span>
+        <i class="fa-solid fa-battery-full fa-2xl"></i>
+        <i class="fa-sharp fa-solid fa-bolt"></i>
+      </div>
+    </div>
+
+    <header class="welcome-header">
+      <h1 class="welcome-header__title">Welcome to KakaoTalk</h1>
+      <p class="welcome-header__text">
+        If you have a Kakao Account, log in with your email or phone number.
+      </p>
+    </header>
+    <!-- form은 중요한 2가지 속성(attribute)을 가지고 있음, action과 method.
+        action은 어떤 페이지로 data를 보낼 것인지 지정할 수 있음.
+        method는 2가지 방식, POST or GET, POST는 이 프로젝트에서 사용할 순 없음, POST는 백엔드 서벙에 정보를 전송하는 방식이기 때문에, 우리는 지금 서버를 갖고 있지 X.
+        우리는 GET 방식을 사용함
+        GET 방식은 보안에 취약함, username과 passwrod를 GET 방식을 사용해선X.
+        URL에 포함되어도 상관없는 정보들을 GET 방식으로 보내야함.
+        위 설명이 form에 대한 모든 설명은 X.
+        만약 GET 방식이나 POST 방식에 대해 좀 더 알아보고 싶다면, 풀스택 유튜브 클론 코딩을 들어보면 됨, form을 많이 쓰기 때문.
+          -->
+    <form action="friends.html" method="get" id="login-form">
+      <input
+        name="username"
+        required
+        type="text"
+        placeholder="Email or phone number"
+      />
+      <input name="password" required type="password" placeholder="Password" />
+      <input type="submit" value="Log In" />
+      <a href="#">Find Kakao Account or Password</a>
+    </form>
+
+    <script
+      src="https://kit.fontawesome.com/6b10c328de.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
