@@ -24,3 +24,7 @@
 .status-bar__column .fa-battery-full {
   margin: 0px 5px;
 }
+/* CSS에서 자주 써 먹을 기술
+justify-content는 각자의 width가 다르기 때문에 정확히 등분할 때 단점이 있다
+이를 보완하기 위해서는 가장 큰 틀에 justify-content: center, 내부 박스에 33% 등으로 퍼센트 나누기, 
+중앙에 위치할 박스는 justify-content: center, 오른쪽에 정렬할 박스는 justify-content: flex-end, align-items: center를 한다. */
